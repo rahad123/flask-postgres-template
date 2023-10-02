@@ -1,0 +1,17 @@
+# Virtual Environment
+venv/
+
+# Byte-compiled / optimized / DILL files
+__pycache__/
+*.pyc
+
+# Logs and temporary files
+*.log
+*.swp
+
+# IDE and editor directors
+.vscode/
+.idea/
+
+# Environment-specific configuration
+.env
