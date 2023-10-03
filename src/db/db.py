@@ -7,7 +7,7 @@ app = Flask(__name__)
 params = {
     'database': 'Match360',
     'user': 'postgres',
-    'password': 'Billu_1234',
+    'password': '*',
     'host': 'localhost',
     'port': '5432'
 }
