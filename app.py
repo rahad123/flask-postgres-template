@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
 from src.user.validators import user
-# from src.app import app
+from src.db import db
 
 app = Flask(__name__)
+
 books = []
 
 
@@ -32,7 +33,13 @@ books = [
 
 @app.route("/", methods=["GET"])
 def getBooks():
-    return books
+    cursor = db.conn.cursor()
+
+    cursor.execute('SELECT * FROM auth.user')
+    results = cursor.fetchall()
+
+    cursor.close()
+    return results
 
 
 @app.route("/create", methods=["POST"])
@@ -41,4 +48,4 @@ def createBooks():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host="192.168.0.131")
+    app.run(debug=True)
