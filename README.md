@@ -1,6 +1,4 @@
-# Python BoilerPlate
-
-#### This the boilerplate for all team.
+# flask-postgres-template
 
 ## Requirements
 
